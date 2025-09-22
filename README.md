@@ -7,3 +7,6 @@ responsables pédagogiques de les examiner, les approuver ou les rejeter avec tr
 
 De plus, le système doit alerter les responsables en cas d’absences répétées et en cas d’absences
 justifiés dans des jours d’évaluations, et fournir des statistiques détaillées.
+
+Équipe : 
+LEWANDOWSKI--BRY Enzo | PLICHON Antoine | BAILLON Arthus | BURGNIES Axel | HOSTELART Lucas
