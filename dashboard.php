@@ -15,8 +15,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     } elseif (isset($_POST["unlock"])) {
         $presenter->unlock($_POST["absenceId"]);
     }
+    header("Location: dashboard.php");
+    exit;
 }
 
-$username = $_SESSION["username"] ?? ($_COOKIE["username"] ?? "Utilisateur");
+
+$username = isset($_SESSION["username"]) ? $_SESSION["username"] : (isset($_COOKIE["username"]) ? $_COOKIE["username"] : "Utilisateur");
 
 $presenter->showDashboard($username);

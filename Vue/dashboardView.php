@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="header">
-    <h2>Bonjour <?= htmlspecialchars($username) ?> 👋</h2>
+    <h2>Bonjour <?= htmlspecialchars($username) ?> </h2>
     <a href="logout.php">Déconnexion</a>
 </div>
 
