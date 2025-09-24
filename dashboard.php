@@ -1,16 +1,21 @@
 <?php
+// Simulation de données statiques avec plus de détails.
 $justifications_attente = [
-    ['date' => '06/05/2025', 'etudiant' => 'Enzo LeGrand', 'id' => 1],
-    ['date' => '06/05/2025', 'etudiant' => 'Arthus Baillon', 'id' => 2],
-    ['date' => '06/05/2025', 'etudiant' => 'Léon Marchand', 'id' => 3],
-    ['date' => '06/05/2025', 'etudiant' => 'Zinedine Zidane', 'id' => 4]
+        ['date' => '06/05/2025', 'etudiant' => 'Enzo LeGrand', 'nom' => 'LeGrand', 'prenom' => 'Enzo', 'email' => 'enzo.legrand@uphf.fr', 'id' => 1],
+        ['date' => '06/05/2025', 'etudiant' => 'Arthus Baillon', 'nom' => 'Baillon', 'prenom' => 'Arthus', 'email' => 'arthus.baillon@uphf.fr', 'id' => 2],
+        ['date' => '06/05/2025', 'etudiant' => 'Léon Marchand', 'nom' => 'Marchand', 'prenom' => 'Léon', 'email' => 'leon.marchand@uphf.fr', 'id' => 3],
+        ['date' => '06/05/2025', 'etudiant' => 'Zinedine Zidane', 'nom' => 'Zidane', 'prenom' => 'Zinedine', 'email' => 'zinedine.zidane@uphf.fr', 'id' => 4],
+        ['date' => '06/05/2025', 'etudiant' => 'Enzo LeGrand', 'nom' => 'LeGrand', 'prenom' => 'Enzo', 'email' => 'enzo.legrand@uphf.fr', 'id' => 1],
+        ['date' => '06/05/2025', 'etudiant' => 'Arthus Baillon', 'nom' => 'Baillon', 'prenom' => 'Arthus', 'email' => 'arthus.baillon@uphf.fr', 'id' => 2],
+        ['date' => '06/05/2025', 'etudiant' => 'Léon Marchand', 'nom' => 'Marchand', 'prenom' => 'Léon', 'email' => 'leon.marchand@uphf.fr', 'id' => 3],
+        ['date' => '06/05/2025', 'etudiant' => 'Zinedine Zidane', 'nom' => 'Zidane', 'prenom' => 'Zinedine', 'email' => 'zinedine.zidane@uphf.fr', 'id' => 4]
 ];
 
 $justifications_historique = [
-    ['date' => '06/05/2025', 'etudiant' => 'Enzo LeGrand', 'statut' => 'Refuser', 'id' => 5],
-    ['date' => '06/05/2025', 'etudiant' => 'Arthus Baillon', 'statut' => 'Accepter', 'id' => 6],
-    ['date' => '06/05/2025', 'etudiant' => 'Léon Marchand', 'statut' => 'Refuser', 'id' => 7],
-    ['date' => '06/05/2025', 'etudiant' => 'Zinedine Zidane', 'statut' => 'Accepter', 'id' => 8]
+        ['date' => '06/05/2025', 'etudiant' => 'Enzo LeGrand', 'statut' => 'Refuser', 'nom' => 'LeGrand', 'prenom' => 'Enzo', 'email' => 'enzo.legrand@uphf.fr', 'id' => 5],
+        ['date' => '06/05/2025', 'etudiant' => 'Arthus Baillon', 'statut' => 'Accepter', 'nom' => 'Baillon', 'prenom' => 'Arthus', 'email' => 'arthus.baillon@uphf.fr', 'id' => 6],
+        ['date' => '06/05/2025', 'etudiant' => 'Léon Marchand', 'statut' => 'Refuser', 'nom' => 'Marchand', 'prenom' => 'Léon', 'email' => 'leon.marchand@uphf.fr', 'id' => 7],
+        ['date' => '06/05/2025', 'etudiant' => 'Zinedine Zidane', 'statut' => 'Accepter', 'nom' => 'Zidane', 'prenom' => 'Zinedine', 'email' => 'zinedine.zidane@uphf.fr', 'id' => 8]
 ];
 ?>
 <!DOCTYPE html>
@@ -37,9 +42,10 @@ $justifications_historique = [
         </div>
     </div>
     <nav class="top-nav">
-        <button class="nav-btn">Statistique</button>
+        <a href="statistiques.php" class="nav-btn">Statistique</a>
         <a href="index.php" class="nav-btn">Déconnexion</a>
     </nav>
+    <div class="yellow-line"></div>
 </header>
 
 <main class="dashboard-main">
@@ -58,7 +64,12 @@ $justifications_historique = [
                     </thead>
                     <tbody id="justificatifs-attente-body">
                     <?php foreach ($justifications_attente as $justif) : ?>
-                        <tr data-date="<?php echo htmlspecialchars($justif['date']); ?>" data-etudiant="<?php echo htmlspecialchars($justif['etudiant']); ?>">
+                        <tr
+                                data-date="<?php echo htmlspecialchars($justif['date']); ?>"
+                                data-etudiant="<?php echo htmlspecialchars($justif['etudiant']); ?>"
+                                data-nom="<?php echo htmlspecialchars($justif['nom']); ?>"
+                                data-prenom="<?php echo htmlspecialchars($justif['prenom']); ?>"
+                                data-email="<?php echo htmlspecialchars($justif['email']); ?>">
                             <td><?php echo htmlspecialchars($justif['date']); ?></td>
                             <td><?php echo htmlspecialchars($justif['etudiant']); ?></td>
                             <td><button class="consult-btn attente">Consulter</button></td>
@@ -83,7 +94,13 @@ $justifications_historique = [
                     </thead>
                     <tbody id="justificatifs-historique-body">
                     <?php foreach ($justifications_historique as $justif) : ?>
-                        <tr data-date="<?php echo htmlspecialchars($justif['date']); ?>" data-etudiant="<?php echo htmlspecialchars($justif['etudiant']); ?>" data-statut="<?php echo htmlspecialchars($justif['statut']); ?>">
+                        <tr
+                                data-date="<?php echo htmlspecialchars($justif['date']); ?>"
+                                data-etudiant="<?php echo htmlspecialchars($justif['etudiant']); ?>"
+                                data-statut="<?php echo htmlspecialchars($justif['statut']); ?>"
+                                data-nom="<?php echo htmlspecialchars($justif['nom']); ?>"
+                                data-prenom="<?php echo htmlspecialchars($justif['prenom']); ?>"
+                                data-email="<?php echo htmlspecialchars($justif['email']); ?>">
                             <td><?php echo htmlspecialchars($justif['date']); ?></td>
                             <td><?php echo htmlspecialchars($justif['etudiant']); ?></td>
                             <td><?php echo htmlspecialchars($justif['statut']); ?></td>
@@ -107,22 +124,28 @@ $justifications_historique = [
 </div>
 
 <div id="viewModalAttente" class="modal">
-    <div class="modal-content">
+    <div class="modal-content attente-view-modal">
         <span class="close-btn">&times;</span>
-        <div class="modal-header-content">
-            <p class="modal-title">Page d'évaluation d'un justificatif</p>
-            <div class="modal-details">
-                <p><strong>Date de l'absence :</strong> <span id="absenceDateAttente"></span></p>
-                <p><strong>Cours concerné :</strong> <span id="coursConcerneAttente"></span></p>
-                <p><strong>Motif :</strong> <span id="motifAttente"></span></p>
+        <div class="modal-body-content">
+            <div class="left-section">
+                <p>Absent du : <span id="absenceDateAttente"></span> à 10h</p>
+                <p>Au : <span id="absenceDateEndAttente"></span> à 15h</p>
+                <p>Motif : <span id="motifAttente"></span></p>
                 <div class="comment-section">
-                    <p><strong>Commentaire :</strong></p>
+                    <p>Commentaire :</p>
                     <textarea readonly id="commentaireAttente"></textarea>
                 </div>
-                <div class="justificatif-box">
-                    <p>Justificatif :</p>
-                    <button class="justificatif-btn">Télécharger le justificatif</button>
-                    <button class="justificatif-btn">Voir un aperçu</button>
+            </div>
+            <div class="right-section">
+                <p class="modal-title">Justificatif :</p>
+                <button class="justificatif-btn" id="downloadJustificatif">Télécharger le justificatif</button>
+                <button class="justificatif-btn" id="previewJustificatif">Voir un aperçu</button>
+                <p>Nom : <span id="etudiantNomAttente"></span></p>
+                <p>Prénom : <span id="etudiantPrenomAttente"></span></p>
+                <p>Adresse mail : <span id="etudiantEmailAttente"></span></p>
+
+                <div id="previewContainerAttente">
+                    <iframe id="justificatifPreviewAttente" class="preview-iframe" frameborder="0"></iframe>
                 </div>
             </div>
         </div>
@@ -135,24 +158,30 @@ $justifications_historique = [
 </div>
 
 <div id="viewModalHistorique" class="modal">
-    <div class="modal-content">
+    <div class="modal-content attente-view-modal">
         <span class="close-btn">&times;</span>
-        <div class="modal-header-content">
-            <p class="modal-title">Page d'évaluation d'un justificatif</p>
-            <div class="modal-details">
-                <p><strong>Date de l'absence :</strong> <span id="absenceDateHistorique"></span></p>
-                <p><strong>Cours concerné :</strong> <span id="coursConcerneHistorique"></span></p>
-                <p><strong>Motif :</strong> <span id="motifHistorique"></span></p>
+        <div class="modal-body-content">
+            <div class="left-section">
+                <p>Absent du : <span id="absenceDateHistorique"></span> à 10h</p>
+                <p>Au : <span id="absenceDateEndHistorique"></span> à 15h</p>
+                <p>Motif : <span id="motifHistorique"></span></p>
                 <div class="comment-section">
-                    <p><strong>Commentaire :</strong></p>
+                    <p>Commentaire :</p>
                     <textarea readonly id="commentaireHistorique"></textarea>
                 </div>
-                <div class="justificatif-box">
-                    <p>Justificatif :</p>
-                    <button class="justificatif-btn">Télécharger le justificatif</button>
-                    <button class="justificatif-btn">Voir un aperçu</button>
+            </div>
+            <div class="right-section">
+                <p class="modal-title">Justificatif :</p>
+                <button class="justificatif-btn" id="downloadJustificatifHistorique">Télécharger le justificatif</button>
+                <button class="justificatif-btn" id="previewJustificatifHistorique">Voir un aperçu</button>
+                <p>Nom : <span id="etudiantNomHistorique"></span></p>
+                <p>Prénom : <span id="etudiantPrenomHistorique"></span></p>
+                <p>Adresse mail : <span id="etudiantEmailHistorique"></span></p>
+                <p>Finalité : <span id="finaliteHistorique"></span></p>
+
+                <div id="previewContainerHistorique">
+                    <iframe id="justificatifPreviewHistorique" class="preview-iframe" frameborder="0"></iframe>
                 </div>
-                <p><strong>Finalité :</strong> <span id="finaliteHistorique"></span></p>
             </div>
         </div>
     </div>

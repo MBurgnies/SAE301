@@ -1,3 +1,4 @@
+/* Styles généraux pour le HTML et le body */
 html, body {
     height: 100%;
     margin: 0;
@@ -6,6 +7,7 @@ html, body {
     background-color: #f0f2f5;
 }
 
+/* Styles pour la page de connexion */
 .login-body {
     display: flex;
     justify-content: center;
@@ -23,26 +25,42 @@ html, body {
     width: 350px;
 }
 
-.logo-area {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.login-header {
     margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
 }
 
-.logo-area img {
-    height: 50px;
-    margin-right: 10px;
+.login-header .logo-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
 }
 
-.logo-text, .logo-right {
+.logo-area .logo-text, .logo-area .logo-right {
     display: flex;
     flex-direction: column;
     font-weight: bold;
+    text-align: left;
 }
 
-.logo-text span:first-child { color: #004586; font-size: 1.2em; }
-.logo-text span:nth-child(2) { color: #0077c5; }
+.logo-area .logo-text span:first-child { color: #004586; font-size: 1.2em; }
+.logo-area .logo-text span:nth-child(2) { color: #0077c5; }
+.logo-area .logo-right {
+    font-size: 0.9em;
+    color: #004586;
+    border-left: 2px solid #ccc;
+    padding-left: 10px;
+}
+
+.login-yellow-line {
+    border-bottom: 5px solid #ffcc00;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
 
 .login-form {
     display: flex;
@@ -75,24 +93,34 @@ html, body {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
 }
 
 .submit-btn:hover {
     background-color: #005a96;
 }
 
+/* Styles pour le tableau de bord et les modales */
 .main-header {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 30px 0;
+    background-color: #fff;
+    border-bottom: 2px solid #ddd;
+    position: relative;
+}
+
+.logo-container, .top-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    background-color: #fff;
-    border-bottom: 2px solid #ddd;
+    width: 100%;
 }
 
 .logo-container {
-    display: flex;
-    align-items: center;
+    margin-bottom: 10px;
 }
 
 .logo-container img {
@@ -101,6 +129,13 @@ html, body {
 
 .logo-text-block {
     margin-left: 15px;
+    font-weight: bold;
+    color: #004586;
+    line-height: 1.2;
+}
+
+.logo-text-block span:nth-child(2) {
+    color: #0077c5;
 }
 
 .logo-right-block {
@@ -108,6 +143,14 @@ html, body {
     border-left: 2px solid #ccc;
     padding-left: 15px;
     font-size: 0.9em;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #004586;
+}
+
+.top-nav {
+    justify-content: flex-end;
+    margin-bottom: 15px;
 }
 
 .top-nav .nav-btn {
@@ -119,7 +162,15 @@ html, body {
     cursor: pointer;
     font-size: 14px;
     margin-left: 10px;
-    text-decoration: none; /* Ajout pour enlever le soulignement du lien */
+    text-decoration: none;
+}
+
+.yellow-line {
+    border-bottom: 5px solid #ffcc00;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 .dashboard-main {
@@ -128,8 +179,10 @@ html, body {
 
 .dashboard-main h1 {
     text-align: center;
-    font-size: 2em;
+    font-size: 2.2rem;
     color: #333;
+    font-weight: normal;
+    margin: 20px 0;
 }
 
 .table-grid {
@@ -154,7 +207,8 @@ html, body {
 }
 
 .table-wrapper {
-    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 300px;
 }
 
 table {
@@ -186,7 +240,7 @@ th {
     background-color: #333;
 }
 
-
+/* Modales */
 .modal {
     display: none;
     position: fixed;
@@ -225,17 +279,24 @@ th {
     cursor: pointer;
 }
 
-.modal-header-content {
-    padding-bottom: 20px;
-    border-bottom: 1px solid #eee;
-    margin-bottom: 20px;
+/* Styles pour les modales de consultation (en attente et historique) */
+.attente-view-modal {
+    padding-top: 50px;
 }
 
-.modal-title {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-align: center;
+.modal-body-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.left-section, .right-section {
+    flex: 1;
+}
+
+.left-section {
+    border-right: 1px solid #ddd;
+    padding-right: 30px;
 }
 
 .modal-details p {
@@ -271,6 +332,7 @@ th {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
+    margin-top: 20px;
 }
 
 .action-btn, .confirm-btn, .retour-btn {
@@ -299,10 +361,168 @@ th {
 .confirm-btn { background-color: #4a4a4a; color: white; }
 .retour-btn { background-color: #ccc; }
 
-
+/* Style pour les messages d'erreur */
 .error-message {
     color: red;
     font-size: 0.9em;
     margin-top: 5px;
     display: block;
+}
+
+/* Nouveaux styles pour l'aperçu du justificatif */
+.preview-iframe {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ccc;
+    margin-top: 15px;
+}
+
+#previewContainerAttente, #previewContainerHistorique {
+    display: none; /* Caché par défaut */
+}
+
+/* Styles pour la page de statistiques */
+.stats-main {
+    padding: 20px;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.rattrapages-section {
+    flex: 2;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.rattrapages-section h1 {
+    font-size: 1.8em;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.stats-box-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.stats-box {
+    background-color: #fff;
+    border: 2px solid #ffcc00;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.stats-box h3 {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.select-wrapper {
+    margin: 15px 0;
+}
+
+.select-wrapper select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.stats-box p {
+    text-align: center;
+}
+
+.stats-btn-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.stats-btn {
+    background-color: #ccc;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #4a4a4a;
+}
+
+/* Styles pour la page de statistiques de l'étudiant */
+.stats-etudiant-main {
+    padding: 20px;
+}
+
+.stats-etudiant-main h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    font-weight: normal;
+    margin: 20px 0;
+}
+
+.stats-graphs-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.graph-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.graph-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.graph-header h3 {
+    margin-bottom: 10px;
+}
+
+.radio-group label {
+    font-size: 0.9em;
+    margin: 0 5px;
+}
+
+.graph-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Styles pour la modale de sélection d'étudiant */
+.select-etudiant-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+#etudiant-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#confirmEtudiantBtn {
+    padding: 12px 25px;
 }
