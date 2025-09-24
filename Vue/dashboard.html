@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord - Université Polytechnique</title>
+    <link rel="stylesheet" href="style_dashboard.css">
+</head>
+<body>
+<div class="header-main">
+    <div class="logo-section">
+        <img src="logo_uphf.png" alt="Logo Université Polytechnique">
+    </div>
+    <div class="header-right">
+        <p>ESPACE NUMÉRIQUE DE TRAVAIL</p>
+        <a href="index.html" class="disconnect-button">Déconnexion</a>
+    </div>
+</div>
+<div class="container">
+    <div class="dashboard-headers">
+        <div class="main-title">
+            <h1>Historique des absences</h1>
+        </div>
+        <div class="main-title">
+            <h1>Absences à justifier</h1>
+        </div>
+    </div>
+    <div class="dashboard-content">
+        <div class="table-container">
+            <table class="absence-table history">
+                <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Statut</th>
+                    <th>Évaluation</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>06/05/2025</td>
+                    <td class="status-pending">En attente</td>
+                    <td>non</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>06/05/2025</td>
+                    <td class="status-accepted">Acceptée</td>
+                    <td>oui</td>
+                    <td><a href="view_motive.html" class="action-button">Voir le motif</a></td>
+                </tr>
+                <tr>
+                    <td>06/05/2025</td>
+                    <td class="status-refused">Refusée</td>
+                    <td>non</td>
+                    <td><a href="view_motive.html" class="action-button">Voir le motif</a></td>
+                </tr>
+                <tr>
+                    <td>06/05/2025</td>
+                    <td class="status-refused">Refusée</td>
+                    <td>non</td>
+                    <td><a href="view_motive.html" class="action-button">Voir le motif</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-container">
+            <table id="justify-table" class="absence-table justify">
+                <thead>
+                <tr>
+                    <th>Justifier<br>plusieurs</th>
+                    <th>Date</th>
+                    <th>Évaluation</th>
+                    <th>Temps<br>restant</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr data-date="06/05/2025" data-course="R3.13 Communication professionnelle">
+                    <td><label>
+                        <input type="checkbox">
+                    </label></td>
+                    <td>06/05/2025</td>
+                    <td>non</td>
+                    <td>48h</td>
+                    <td><a href="rejustify.html" class="action-button">À re-justifier</a></td>
+                </tr>
+                <tr data-date="06/05/2025" data-course="R3.09 Programmation">
+                    <td><label>
+                        <input type="checkbox">
+                    </label></td>
+                    <td>06/05/2025</td>
+                    <td>oui</td>
+                    <td>6h</td>
+                    <td><a href="justify.html" class="action-button">Justifier</a></td>
+                </tr>
+                <tr data-date="06/05/2025" data-course="R3.12 Anglais">
+                    <td><label>
+                        <input type="checkbox">
+                    </label></td>
+                    <td>06/05/2025</td>
+                    <td>non</td>
+                    <td>7h</td>
+                    <td><a href="justify.html" class="action-button">Justifier</a></td>
+                </tr>
+                <tr data-date="06/05/2025" data-course="R3.11 Base de données">
+                    <td><label>
+                        <input type="checkbox">
+                    </label></td>
+                    <td>06/05/2025</td>
+                    <td>non</td>
+                    <td>1h</td>
+                    <td><a href="justify.html" class="action-button">Justifier</a></td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="justify-multiple-button">
+                <button id="justify-multiple-btn" class="action-button">Justifier les absences cochées</button>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="main-footer"></footer>
+
+<script>
+    document.getElementById('justify-multiple-btn').addEventListener('click', function() {
+        const selectedAbsences = [];
+        document.querySelectorAll('#justify-table tbody input[type="checkbox"]:checked').forEach(function(checkbox) {
+            const row = checkbox.closest('tr');
+            const date = row.getAttribute('data-date');
+            const course = row.getAttribute('data-course');
+            selectedAbsences.push({ date: date, course: course });
+        });
+        if (selectedAbsences.length > 0) {
+            sessionStorage.setItem('selectedAbsences', JSON.stringify(selectedAbsences));
+            window.location.href = 'justify_multiple.html';
+        } else {
+            alert('Veuillez sélectionner au moins une absence à justifier.');
+        }
+    });
+</script>
+</body>
+</html>

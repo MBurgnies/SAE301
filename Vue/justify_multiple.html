@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justification multiple - Université Polytechnique</title>
+    <link rel="stylesheet" href="style_justify_multiple.css">
+</head>
+<body>
+<div class="header-main">
+    <div class="logo-section">
+        <img src="logo_uphf.png" alt="Logo Université Polytechnique">
+    </div>
+    <div class="header-right">
+        <p>ESPACE NUMÉRIQUE DE TRAVAIL</p>
+        <a href="dashboard.html" class="disconnect-button">Retour au tableau de bord</a>
+    </div>
+</div>
+<div class="main-content">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Justification de plusieurs absences</h3>
+            <a href="dashboard.html" class="close-button">&times;</a>
+        </div>
+        <div class="modal-body">
+            <div class="form-section">
+                <h4>Absences sélectionnées</h4>
+                <ul id="selected-absences-list" class="absence-list">
+                </ul>
+                <div class="form-group">
+                    <label for="motif">Motif</label>
+                    <select id="motif" class="form-input">
+                        <option value="">Choisissez le motif</option>
+                        <option value="maladie">Maladie</option>
+                        <option value="rendez-vous">Rendez-vous</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="commentaire">Commentaire</label>
+                    <textarea id="commentaire" class="form-input" placeholder="Écrivez un commentaire...(facultatif)"></textarea>
+                </div>
+            </div>
+            <div class="form-section">
+                <div class="form-group">
+                    <label>Renseignements/Documents</label>
+                    <input type="file" id="justificatif" class="file-input">
+                    <label for="justificatif" class="file-label">Importer un fichier</label>
+                    <small>Fichier justificatif (pdf, png, jpeg, jpg)</small>
+                </div>
+            </div>
+        </div>
+        <div class="button-footer">
+            <button class="action-button">Envoyer</button>
+        </div>
+    </div>
+</div>
+<footer class="main-footer"></footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const absencesList = document.getElementById('selected-absences-list');
+        const selectedAbsences = JSON.parse(sessionStorage.getItem('selectedAbsences'));
+
+        if (selectedAbsences && selectedAbsences.length > 0) {
+            selectedAbsences.forEach(absence => {
+                const li = document.createElement('li');
+                li.textContent = `${absence.date} - ${absence.course}`;
+                absencesList.appendChild(li);
+            });
+            // Nettoie les données du stockage de session après les avoir utilisées
+            sessionStorage.removeItem('selectedAbsences');
+        }
+    });
+</script>
+</body>
+</html>

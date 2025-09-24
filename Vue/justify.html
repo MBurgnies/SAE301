@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justification d'absence - Université Polytechnique</title>
+    <link rel="stylesheet" href="style_justify.css">
+</head>
+<body>
+<div class="header-main">
+    <div class="logo-section">
+        <img src="logo_uphf.png" alt="Logo Université Polytechnique">
+    </div>
+    <div class="header-right">
+        <p>ESPACE NUMÉRIQUE DE TRAVAIL</p>
+        <a href="dashboard.html" class="disconnect-button">Retour au tableau de bord</a>
+    </div>
+</div>
+
+<div class="main-content">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Justification d'une absence</h3>
+            <a href="dashboard.html" class="close-button">&times;</a>
+        </div>
+        <div class="modal-body">
+            <div class="form-section">
+                <div class="form-group">
+                    <label>Date d'absence</label>
+                    <input type="text" class="form-input" value="06/05/2025" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Cours concerné</label>
+                    <input type="text" class="form-input" value="R3.13 Communication professionnelle" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="motif">Motif</label>
+                    <select id="motif" class="form-input">
+                        <option value="">Choisissez le motif</option>
+                        <option value="maladie">Maladie</option>
+                        <option value="rendez-vous">Rendez-vous</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="commentaire">Commentaire</label>
+                    <textarea id="commentaire" class="form-input" placeholder="Écrivez un commentaire...(facultatif)"></textarea>
+                </div>
+            </div>
+            <div class="form-section">
+                <div class="form-group">
+                    <label>Renseignements/Documents</label>
+                    <input type="file" id="justificatif" class="file-input">
+                    <label for="justificatif" class="file-label">Importer un fichier</label>
+                    <small>Fichier justificatif (pdf, png, jpeg, jpg)</small>
+                </div>
+            </div>
+        </div>
+        <div class="button-footer">
+            <button class="action-button">Envoyer</button>
+        </div>
+    </div>
+</div>
+
+<footer class="main-footer"></footer>
+</body>
+</html>
