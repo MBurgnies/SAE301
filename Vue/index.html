@@ -3,32 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page de connexion - Université Polytechnique</title>
+    <title>Connexion - Université Polytechnique</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-    <div class="header">
+<div class="header-main">
+    <div class="logo-section">
         <img src="logo_uphf.png" alt="Logo Université Polytechnique">
-        <div class="header-info">
-            <p>ESPACE NUMÉRIQUE DE TRAVAIL</p>
-        </div>
     </div>
-    <div class="main-content">
-        <div class="login-form">
+    <div class="header-right">
+        <p>ESPACE NUMÉRIQUE DE TRAVAIL</p>
+    </div>
+</div>
+
+<div class="login-container">
+    <div class="login-box">
+        <form action="dashboard.html" method="get">
             <div class="form-group">
                 <label for="username">Nom d'utilisateur</label>
-                <input type="text" id="username" placeholder="Entrez votre nom...">
+                <input type="text" id="username" name="username" placeholder="Entrez votre nom..." required>
             </div>
             <div class="form-group">
                 <label for="password">Mot de passe</label>
-                <input type="password" id="password" placeholder="Entrez votre mot de passe...">
+                <input type="password" id="password" name="password" placeholder="Entrez votre mot de passe..." required>
             </div>
-            <button class="login-button">Envoyer</button>
-        </div>
-    </div>
-    <div class="footer">
+            <button type="submit" class="login-button">Envoyer</button>
+        </form>
     </div>
 </div>
+
+<footer class="main-footer"></footer>
 </body>
 </html>

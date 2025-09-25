@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tableau de bord - Université Polytechnique</title>
     <link rel="stylesheet" href="style_dashboard.css">
+    <link rel="stylesheet" href="style_justify.css">
 </head>
 <body>
 <div class="header-main">
@@ -17,14 +18,7 @@
     </div>
 </div>
 <div class="container">
-    <div class="dashboard-headers">
-        <div class="main-title">
-            <h1>Historique des absences</h1>
-        </div>
-        <div class="main-title">
-            <h1>Absences à justifier</h1>
-        </div>
-    </div>
+    <h1>Historique des absences</h1>
     <div class="dashboard-content">
         <div class="table-container">
             <table class="absence-table history">
@@ -63,79 +57,130 @@
                 </tr>
                 </tbody>
             </table>
-        </div>
-        <div class="table-container">
-            <table id="justify-table" class="absence-table justify">
-                <thead>
-                <tr>
-                    <th>Justifier<br>plusieurs</th>
-                    <th>Date</th>
-                    <th>Évaluation</th>
-                    <th>Temps<br>restant</th>
-                    <th></th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr data-date="06/05/2025" data-course="R3.13 Communication professionnelle">
-                    <td><label>
-                        <input type="checkbox">
-                    </label></td>
-                    <td>06/05/2025</td>
-                    <td>non</td>
-                    <td>48h</td>
-                    <td><a href="rejustify.html" class="action-button">À re-justifier</a></td>
-                </tr>
-                <tr data-date="06/05/2025" data-course="R3.09 Programmation">
-                    <td><label>
-                        <input type="checkbox">
-                    </label></td>
-                    <td>06/05/2025</td>
-                    <td>oui</td>
-                    <td>6h</td>
-                    <td><a href="justify.html" class="action-button">Justifier</a></td>
-                </tr>
-                <tr data-date="06/05/2025" data-course="R3.12 Anglais">
-                    <td><label>
-                        <input type="checkbox">
-                    </label></td>
-                    <td>06/05/2025</td>
-                    <td>non</td>
-                    <td>7h</td>
-                    <td><a href="justify.html" class="action-button">Justifier</a></td>
-                </tr>
-                <tr data-date="06/05/2025" data-course="R3.11 Base de données">
-                    <td><label>
-                        <input type="checkbox">
-                    </label></td>
-                    <td>06/05/2025</td>
-                    <td>non</td>
-                    <td>1h</td>
-                    <td><a href="justify.html" class="action-button">Justifier</a></td>
-                </tr>
-                </tbody>
-            </table>
-            <div class="justify-multiple-button">
-                <button id="justify-multiple-btn" class="action-button">Justifier les absences cochées</button>
+            <div class="justify-button">
+                <button id="deposit-justify-btn" class="action-button">Déposer un justificatif</button>
             </div>
         </div>
     </div>
 </div>
 <footer class="main-footer"></footer>
 
+<div id="justify-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Justification d'une absence</h3>
+            <span class="close-button">&times;</span>
+        </div>
+        <div class="modal-body">
+            <div class="form-section">
+                <h4>Absence</h4>
+                <div class="form-group">
+                    <label for="date-start">Absent du</label>
+                    <input type="date" id="date-start" class="form-input" required>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="time-start">À :</label>
+                    <input type="time" id="time-start" class="form-input" required>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="date-end">Au</label>
+                    <input type="date" id="date-end" class="form-input" required>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="time-end">À :</label>
+                    <input type="time" id="time-end" class="form-input" required>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="motif">Motif</label>
+                    <select id="motif" class="form-input" required>
+                        <option value="">Choisissez le motif</option>
+                        <option value="maladie">Maladie</option>
+                        <option value="rendez-vous">Rendez-vous</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="commentaire">Commentaire</label>
+                    <textarea id="commentaire" class="form-input" placeholder="Écrivez un commentaire... (facultatif)"></textarea>
+                </div>
+            </div>
+            <div class="form-section">
+                <h4>Renseignements/Documents</h4>
+                <div class="form-group">
+                    <label for="justificatif" class="file-label">Importer un fichier</label>
+                    <input type="file" id="justificatif" class="file-input">
+                    <span class="error-message"></span>
+                    <small>Fichier justificatif (pdf, png, jpeg, jpg)</small>
+                </div>
+                <div class="form-group">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" class="form-input" placeholder="Entrez votre nom..." required>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenom" class="form-input" placeholder="Entrez votre prénom..." required>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Adresse mail</label>
+                    <input type="email" id="email" class="form-input" placeholder="Entrez votre adresse mail..." required>
+                    <span class="error-message"></span>
+                </div>
+            </div>
+        </div>
+        <div class="button-footer">
+            <button id="submit-justify-btn" class="action-button">Envoyer</button>
+        </div>
+    </div>
+</div>
+
 <script>
-    document.getElementById('justify-multiple-btn').addEventListener('click', function() {
-        const selectedAbsences = [];
-        document.querySelectorAll('#justify-table tbody input[type="checkbox"]:checked').forEach(function(checkbox) {
-            const row = checkbox.closest('tr');
-            const date = row.getAttribute('data-date');
-            const course = row.getAttribute('data-course');
-            selectedAbsences.push({ date: date, course: course });
+    const justifyModal = document.getElementById('justify-modal');
+    const depositJustifyBtn = document.getElementById('deposit-justify-btn');
+    const closeModalBtn = justifyModal.querySelector('.close-button');
+    const submitJustifyBtn = document.getElementById('submit-justify-btn');
+
+    depositJustifyBtn.addEventListener('click', () => {
+        justifyModal.style.display = 'flex';
+    });
+
+    closeModalBtn.addEventListener('click', () => {
+        justifyModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === justifyModal) {
+            justifyModal.style.display = 'none';
+        }
+    });
+
+    submitJustifyBtn.addEventListener('click', (event) => {
+        event.preventDefault(); // Empêche l'envoi du formulaire pour la validation
+
+        const requiredFields = document.querySelectorAll('#justify-modal [required]');
+        let formIsValid = true;
+
+        requiredFields.forEach(field => {
+            const errorSpan = field.nextElementSibling;
+            if (!field.value) {
+                field.classList.add('invalid');
+                errorSpan.textContent = "Ce champ est obligatoire";
+                formIsValid = false;
+            } else {
+                field.classList.remove('invalid');
+                errorSpan.textContent = "";
+            }
         });
-        if (selectedAbsences.length > 0) {
-            sessionStorage.setItem('selectedAbsences', JSON.stringify(selectedAbsences));
-            window.location.href = 'justify_multiple.html';
-        } else {
-            alert('Veuillez sélectionner au moins une absence à justifier.');
+
+        if (formIsValid) {
+            alert('Formulaire envoyé avec succès !');
+            justifyModal.style.display = 'none';
         }
     });
 </script>

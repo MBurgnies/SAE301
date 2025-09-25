@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
-    min-height: 100vh; /* Permet au body de prendre au moins toute la hauteur de la fenêtre */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -17,26 +17,8 @@ body {
     border-bottom: 2px solid #e0e0e0;
 }
 
-.logo-section {
-    display: flex;
-    align-items: center;
-}
-
 .logo-section img {
     height: 40px;
-    margin-right: 15px;
-}
-
-.logo-text h2 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #333;
-}
-
-.logo-text p {
-    margin: 0;
-    font-size: 0.8rem;
-    color: #666;
 }
 
 .header-right {
@@ -51,7 +33,7 @@ body {
 }
 
 .disconnect-button {
-    background-color: #dc3545;
+    background-color: #004d66;
     color: white;
     padding: 8px 15px;
     text-decoration: none;
@@ -61,42 +43,22 @@ body {
 }
 
 .disconnect-button:hover {
-    background-color: #c82333;
+    background-color: #00334d;
 }
 
 .container {
-    width: 90%;
-    max-width: 1400px;
-    margin: 30px auto;
-    background-color: #fff;
+    flex-grow: 1;
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex-grow: 1; /* Permet au contenu de s'étendre et de pousser le footer vers le bas */
-}
-
-.dashboard-headers {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
-}
-
-.main-title {
-    flex: 1;
-}
-
-.main-title h1 {
-    font-size: 1.5rem;
-    color: #333;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #ddd;
 }
 
 .dashboard-content {
     display: flex;
-    justify-content: space-between;
     gap: 30px;
+    width: 100%;
+    max-width: 900px;
 }
 
 .table-container {
@@ -106,55 +68,202 @@ body {
 .absence-table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
-    font-size: 0.9rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.absence-table thead tr {
+    background-color: #004d66;
+    color: white;
 }
 
 .absence-table th,
 .absence-table td {
-    padding: 12px;
+    padding: 12px 15px;
     text-align: left;
-    border: 1px solid #ccc;
 }
 
-.absence-table th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-    color: #555;
-}
-
-.absence-table tr:nth-child(even) {
-    background-color: #f9f9f9;
+.absence-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
 }
 
 .status-pending {
-    background-color: #ffc107;
-    color: #333;
+    color: #ffc107;
     font-weight: bold;
-    text-align: center;
 }
 
 .status-accepted {
-    background-color: #28a745;
-    color: white;
+    color: #28a745;
     font-weight: bold;
-    text-align: center;
 }
 
 .status-refused {
-    background-color: #dc3545;
-    color: white;
+    color: #dc3545;
     font-weight: bold;
-    text-align: center;
 }
 
 .action-button {
-    display: inline-block;
-    padding: 8px 12px;
     background-color: #007bff;
     color: white;
-    text-decoration: none;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+
+.absence-table .action-button {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+}
+
+.action-button:hover {
+    background-color: #0056b3;
+}
+
+.justify-button {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.justify-button .action-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+.main-footer {
+    height: 40px;
+    background-color: #004d66;
+}
+
+/* Styles pour la fenêtre modale */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.close-button {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+}
+
+.modal-body {
+    display: flex;
+    gap: 30px;
+}
+
+.form-section {
+    flex: 1;
+}
+
+.form-section h4 {
+    border-bottom: 2px solid #004d66;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.file-input {
+    display: none;
+}
+
+.file-label {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.file-label:hover {
+    background-color: #0056b3;
+}
+
+.button-footer {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.action-button {
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
@@ -162,25 +271,14 @@ body {
     background-color: #0056b3;
 }
 
-.justify-multiple-button {
-    text-align: center;
-    margin-top: 20px;
+/* Styles pour la validation */
+.form-group .error-message {
+    color: #dc3545;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: block;
 }
 
-.justify-multiple-button a {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.justify-multiple-button a:hover {
-    background-color: #0056b3;
-}
-
-.main-footer {
-    height: 40px;
-    background-color: #004d66;
+.form-input.invalid {
+    border-color: #dc3545;
 }

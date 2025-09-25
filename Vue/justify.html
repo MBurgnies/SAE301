@@ -25,13 +25,22 @@
         </div>
         <div class="modal-body">
             <div class="form-section">
+                <h4>Absence</h4>
                 <div class="form-group">
-                    <label>Date d'absence</label>
-                    <input type="text" class="form-input" value="06/05/2025" readonly>
+                    <label for="date-start">Absent du</label>
+                    <input type="date" id="date-start" class="form-input">
                 </div>
                 <div class="form-group">
-                    <label>Cours concerné</label>
-                    <input type="text" class="form-input" value="R3.13 Communication professionnelle" readonly>
+                    <label for="time-start">À :</label>
+                    <input type="time" id="time-start" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="date-end">Au</label>
+                    <input type="date" id="date-end" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="time-end">À :</label>
+                    <input type="time" id="time-end" class="form-input">
                 </div>
                 <div class="form-group">
                     <label for="motif">Motif</label>
@@ -44,15 +53,28 @@
                 </div>
                 <div class="form-group">
                     <label for="commentaire">Commentaire</label>
-                    <textarea id="commentaire" class="form-input" placeholder="Écrivez un commentaire...(facultatif)"></textarea>
+                    <textarea id="commentaire" class="form-input" placeholder="Écrivez un commentaire... (facultatif)"></textarea>
                 </div>
             </div>
+
             <div class="form-section">
+                <h4>Renseignements/Documents</h4>
                 <div class="form-group">
-                    <label>Renseignements/Documents</label>
-                    <input type="file" id="justificatif" class="file-input">
                     <label for="justificatif" class="file-label">Importer un fichier</label>
+                    <input type="file" id="justificatif" class="file-input">
                     <small>Fichier justificatif (pdf, png, jpeg, jpg)</small>
+                </div>
+                <div class="form-group">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" class="form-input" placeholder="Entrez votre nom...">
+                </div>
+                <div class="form-group">
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenom" class="form-input" placeholder="Entrez votre prénom...">
+                </div>
+                <div class="form-group">
+                    <label for="email">Adresse mail</label>
+                    <input type="email" id="email" class="form-input" placeholder="Entrez votre adresse mail...">
                 </div>
             </div>
         </div>
@@ -61,7 +83,6 @@
         </div>
     </div>
 </div>
-
 <footer class="main-footer"></footer>
 </body>
 </html>
