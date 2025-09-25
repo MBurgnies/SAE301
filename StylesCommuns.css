@@ -6,6 +6,17 @@
 
 
     /* style footer */
-
+.main-footer {
+    height: 40px;
+    background-color: #004d66;
+}
 
     /* style header */
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #fff;
+    border-bottom: 2px solid #e0e0e0;
+}
