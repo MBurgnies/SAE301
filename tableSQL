@@ -1,0 +1,92 @@
+DROP TABLE IF EXISTS Absence, Justificatif, Utilisateur, Statut, MotifPourResponsable, MotifPourEleve CASCADE;
+
+
+CREATE TABLE MotifPourEleve (
+                                motifEleve TEXT PRIMARY KEY
+);
+
+CREATE TABLE MotifPourResponsable (
+                                      motifRespon TEXT PRIMARY KEY
+);
+
+CREATE TABLE Statut (
+                        Statut TEXT PRIMARY KEY
+);
+
+CREATE TABLE Utilisateur (
+                             idUtilisateur SERIAL PRIMARY KEY,
+                             nomUtilisateur TEXT,
+                             motDePasse TEXT,
+                             nom TEXT,
+                             prénom TEXT,
+                             role TEXT
+);
+
+CREATE TABLE Justificatif (
+                              idJustificatif SERIAL PRIMARY KEY,
+                              dateDebut DATE,
+                              dateFin DATE,
+                              heureDebut TIME,
+                              heureFin TIME,
+                              fichier BYTEA,
+                              CommentaireEleve TEXT,
+                              AdresseMail TEXT,
+                              commentaireRespon TEXT,
+                              motifEleve TEXT,
+                              motifRespon TEXT,
+                              statutJustificatif TEXT,
+                              idUtilisateur INTEGER,
+                              FOREIGN KEY (motifEleve) REFERENCES MotifPourEleve(motifEleve),
+                              FOREIGN KEY (motifRespon) REFERENCES MotifPourResponsable(motifRespon),
+                              FOREIGN KEY (statutJustificatif) REFERENCES Statut(Statut),
+                              FOREIGN KEY (idUtilisateur) REFERENCES Utilisateur(idUtilisateur)
+);
+
+CREATE TABLE Absence (
+                         idAbsence SERIAL PRIMARY KEY,
+                         date DATE,
+                         heure TIME,
+                         duree INTERVAL,
+                         evaluation BOOLEAN,
+                         temp TEXT,
+                         statutAbsence TEXT,
+                         idUtilisateur INTEGER,
+                         FOREIGN KEY (statutAbsence) REFERENCES Statut(Statut),
+                         FOREIGN KEY (idUtilisateur) REFERENCES Utilisateur(idUtilisateur)
+);
+
+
+INSERT INTO Statut VALUES ('Justifié'), ('Non Justifié'), ('En Attente');
+
+INSERT INTO MotifPourEleve VALUES ('Maladie'), ('RDV médical');
+INSERT INTO MotifPourResponsable VALUES ('Décès d’un proche'), ('Situation familiale');
+
+INSERT INTO Utilisateur (nomUtilisateur, motDePasse, nom, prénom, role)
+VALUES ('jdupont', 'mdp123', 'Dupont', 'Jean', 'Élève');
+
+
+INSERT INTO Justificatif (
+    dateDebut, dateFin, heureDebut, heureFin,
+    fichier, CommentaireEleve, AdresseMail, commentaireRespon,
+    motifEleve, motifRespon, statutJustificatif, idUtilisateur
+) VALUES (
+             '2025-10-18', '2025-10-18', '08:00', '10:00',
+             decode('DEADBEEF', 'hex'), 'J’étais malade', 'eleve@mail.com', 'Compris',
+             'Maladie', 'Décès d’un proche', 'En Attente', 1
+         );
+
+
+INSERT INTO Absence (
+    date, heure, duree, evaluation, temp, statutAbsence, idUtilisateur
+) VALUES (
+             '2025-10-18', '08:00', '2 hours', TRUE, '36.5°C', 'En Attente', 1
+         );
+
+
+SELECT u.nomUtilisateur, j.dateDebut, j.CommentaireEleve, j.statutJustificatif
+FROM Justificatif j
+         JOIN Utilisateur u ON j.idUtilisateur = u.idUtilisateur;
+
+SELECT a.date, a.heure, a.duree, a.evaluation, s.Statut
+FROM Absence a
+         JOIN Statut s ON a.statutAbsence = s.Statut;
