@@ -1,0 +1,21 @@
+Index: .idea/php.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"MessDetector\">\r\n    <phpmd_settings>\r\n      <phpmd_by_interpreter asDefaultInterpreter=\"true\" interpreter_id=\"7d1a8eb3-d588-4f93-b2ea-1ae3be0de911\" timeout=\"30000\" />\r\n    </phpmd_settings>\r\n  </component>\r\n  <component name=\"MessDetectorOptionsConfiguration\">\r\n    <option name=\"transferred\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PHPCSFixerOptionsConfiguration\">\r\n    <option name=\"transferred\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PHPCodeSnifferOptionsConfiguration\">\r\n    <option name=\"highlightLevel\" value=\"WARNING\" />\r\n    <option name=\"transferred\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PhpCodeSniffer\">\r\n    <phpcs_settings>\r\n      <phpcs_by_interpreter asDefaultInterpreter=\"true\" interpreter_id=\"7d1a8eb3-d588-4f93-b2ea-1ae3be0de911\" timeout=\"30000\" />\r\n    </phpcs_settings>\r\n  </component>\r\n  <component name=\"PhpIncludePathManager\">\r\n    <include_path>\r\n      <path value=\"$PROJECT_DIR$/vendor/phpmailer/phpmailer\" />\r\n      <path value=\"$PROJECT_DIR$/vendor/composer\" />\r\n    </include_path>\r\n  </component>\r\n  <component name=\"PhpStanOptionsConfiguration\">\r\n    <option name=\"transferred\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PsalmOptionsConfiguration\">\r\n    <option name=\"transferred\" value=\"true\" />\r\n  </component>\r\n</project>
+===================================================================
+diff --git a/.idea/php.xml b/.idea/php.xml
+--- a/.idea/php.xml	(revision 3f8fef449fafefc5741bf4a48fa342d5cc2463f7)
++++ b/.idea/php.xml	(date 1760076697329)
+@@ -26,6 +26,12 @@
+       <path value="$PROJECT_DIR$/vendor/composer" />
+     </include_path>
+   </component>
++  <component name="PhpIncludePathManager">
++    <include_path>
++      <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
++      <path value="$PROJECT_DIR$/vendor/composer" />
++    </include_path>
++  </component>
+   <component name="PhpStanOptionsConfiguration">
+     <option name="transferred" value="true" />
+   </component>

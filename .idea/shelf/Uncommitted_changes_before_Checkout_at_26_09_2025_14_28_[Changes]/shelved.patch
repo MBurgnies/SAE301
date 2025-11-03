@@ -1,0 +1,16 @@
+Index: Vue/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"fr\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <title>Connexion - Université Polytechnique</title>\r\n    <link rel=\"stylesheet\" href=\"style.css\">\r\n</head>\r\n<body>\r\n<div class=\"header-main\">\r\n    <div class=\"logo-section\">\r\n        <img src=\"logo_uphf.png\" alt=\"Logo Université Polytechnique\">\r\n    </div>\r\n    <div class=\"header-right\">\r\n        <p>ESPACE NUMÉRIQUE DE TRAVAIL</p>\r\n    </div>\r\n</div>\r\n\r\n<div class=\"login-container\">\r\n    <div class=\"login-box\">\r\n        <form action=\"dashboard.html\" method=\"get\">\r\n            <div class=\"form-group\">\r\n                <label for=\"username\">Nom d'utilisateur</label>\r\n                <input type=\"text\" id=\"username\" name=\"username\" placeholder=\"Entrez votre nom...\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label for=\"password\">Mot de passe</label>\r\n                <input type=\"password\" id=\"password\" name=\"password\" placeholder=\"Entrez votre mot de passe...\" required>\r\n            </div>\r\n            <button type=\"submit\" class=\"login-button\">Envoyer</button>\r\n        </form>\r\n    </div>\r\n</div>\r\n\r\n<footer class=\"main-footer\"></footer>\r\n</body>\r\n</html>
+===================================================================
+diff --git a/Vue/index.html b/Vue/index.html
+--- a/Vue/index.html	(revision 2032ac5442efe4702a7d7ccb5612ccfa6e6ac665)
++++ b/Vue/index.html	(date 1758889661158)
+@@ -7,6 +7,7 @@
+     <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
++
+ <div class="header-main">
+     <div class="logo-section">
+         <img src="logo_uphf.png" alt="Logo Université Polytechnique">
