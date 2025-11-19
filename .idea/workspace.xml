@@ -4,7 +4,73 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e8703d9-5157-4b24-bb96-ef2aa4738c50" name="Changes" comment="a" />
+    <list default="true" id="1e8703d9-5157-4b24-bb96-ef2aa4738c50" name="Changes" comment="ajout code">
+      <change afterPath="$PROJECT_DIR$/MVP/Modele/Admin_Modele.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Modele/ConnexionBDD.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Modele/Connexion_Modele.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Modele/Etudiant_Modele.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Modele/Professeur_Modele.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Modele/Responsable_Modele.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Modele/Secretaire_Modele.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Modele/uploads/690b54256a4a21.04544276.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Modele/uploads/690b59ee17a2e1.40509113.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Acceptation_Presenteur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Ajouter_Utilisateur_Presenteur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Confirmation_Deverouillage_Presenteur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Connexion_Presenteur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Consultation_Attente_Presenteur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Consultation_Historique_Presenteur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Demande_De_Revision_Presenteur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Deposer_Justificatif_Presenteur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Etudiant_Accueil_Presenteur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Lire_Le_CSV_Presenteur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Motif_Absence_Presenteur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Professeur_Accueil_Presenteur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Refus_Presenteur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Responsable_Accueil_Presenteur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Statistique_Accueil_Presenteur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Statistique_Etudiant_Presenteur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Statistique_Selection_Presenteur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/ADMIN.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/Motif_Absence.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/Page_Acceptation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/Page_Accueil_Etudiant.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/Page_Accueil_Professeur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/Page_Accueil_Responsable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/Page_Accueil_Secretaire.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/Page_Confirmation_Deverouillage.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/Page_Consultation_Justificatif_En_Attente.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/Page_Consultation_Justificatif_Historique.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/Page_De_Connexion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/Page_De_Refus.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/Page_Demande_Revision.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/Page_Deposer_Justificatif.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/Page_Selection_Etudiant_Statistique.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/Page_Statistique_Accueil.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/Page_Statistique_D_Un_Etudiant.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/Politique_Absence.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_ADMIN.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Motif_Absence.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Page_Acceptation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Page_Accueil_Professeur.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Page_Accueil_Responsable.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Page_Confirmation_Deverouillage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Page_Consultation_Justificatif_En_Attente.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Page_Consultation_Justificatif_Historique.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Page_D'accueil_Etudiant.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Page_D'accueil_Secretaire.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Page_De_Connexion.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Page_De_Refus.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Page_Demande_Revision.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Page_Deposer_Justificatif.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Page_Selection_Etudiant_Statistique.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Page_Statistique_Accueil.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Page_Statistique_Dun_Etudiant.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Politique_Absence.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVP/Vue/images/logo_uphf.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,24 +124,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.index.html.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/antoi/PhpstormProjects/SAE301",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/antoi/PhpstormProjects/SAE301&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\antoi\PhpstormProjects\SAE301" />
@@ -111,6 +177,9 @@
       <workItem from="1760509270396" duration="3575000" />
       <workItem from="1760949174513" duration="120000" />
       <workItem from="1761301545185" duration="689000" />
+      <workItem from="1762330576018" duration="423000" />
+      <workItem from="1762357460146" duration="25000" />
+      <workItem from="1763538578963" duration="27000" />
     </task>
     <task id="LOCAL-00001" summary="modif nom">
       <option name="closed" value="true" />
@@ -144,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758788049157</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ajout code">
+      <option name="closed" value="true" />
+      <created>1762330390976</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1762330390976</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +254,7 @@
     <MESSAGE value="modif nom" />
     <MESSAGE value="ajout fichier commun" />
     <MESSAGE value="ajout fichier commun style" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout fichier commun style" />
+    <MESSAGE value="ajout code" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout code" />
   </component>
 </project>
