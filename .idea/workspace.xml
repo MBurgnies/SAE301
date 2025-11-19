@@ -4,72 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e8703d9-5157-4b24-bb96-ef2aa4738c50" name="Changes" comment="ajout code">
-      <change afterPath="$PROJECT_DIR$/MVP/Modele/Admin_Modele.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Modele/ConnexionBDD.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Modele/Connexion_Modele.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Modele/Etudiant_Modele.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Modele/Professeur_Modele.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Modele/Responsable_Modele.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Modele/Secretaire_Modele.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Modele/uploads/690b54256a4a21.04544276.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Modele/uploads/690b59ee17a2e1.40509113.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Acceptation_Presenteur.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Ajouter_Utilisateur_Presenteur.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Confirmation_Deverouillage_Presenteur.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Connexion_Presenteur.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Consultation_Attente_Presenteur.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Consultation_Historique_Presenteur.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Demande_De_Revision_Presenteur.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Deposer_Justificatif_Presenteur.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Etudiant_Accueil_Presenteur.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Lire_Le_CSV_Presenteur.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Motif_Absence_Presenteur.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Professeur_Accueil_Presenteur.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Refus_Presenteur.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Responsable_Accueil_Presenteur.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Statistique_Accueil_Presenteur.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Statistique_Etudiant_Presenteur.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Presentation/Statistique_Selection_Presenteur.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/ADMIN.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/Motif_Absence.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/Page_Acceptation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/Page_Accueil_Etudiant.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/Page_Accueil_Professeur.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/Page_Accueil_Responsable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/Page_Accueil_Secretaire.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/Page_Confirmation_Deverouillage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/Page_Consultation_Justificatif_En_Attente.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/Page_Consultation_Justificatif_Historique.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/Page_De_Connexion.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/Page_De_Refus.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/Page_Demande_Revision.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/Page_Deposer_Justificatif.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/Page_Selection_Etudiant_Statistique.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/Page_Statistique_Accueil.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/Page_Statistique_D_Un_Etudiant.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/Politique_Absence.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_ADMIN.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Motif_Absence.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Page_Acceptation.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Page_Accueil_Professeur.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Page_Accueil_Responsable.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Page_Confirmation_Deverouillage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Page_Consultation_Justificatif_En_Attente.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Page_Consultation_Justificatif_Historique.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Page_D'accueil_Etudiant.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Page_D'accueil_Secretaire.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Page_De_Connexion.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Page_De_Refus.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Page_Demande_Revision.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Page_Deposer_Justificatif.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Page_Selection_Etudiant_Statistique.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Page_Statistique_Accueil.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Page_Statistique_Dun_Etudiant.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/css/Style_Politique_Absence.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVP/Vue/images/logo_uphf.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="1e8703d9-5157-4b24-bb96-ef2aa4738c50" name="Changes" comment="modifications du code suite à la revue (modif soumission soumission justificatif et modifications de ce qui n'avais pas été validé)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVP/Modele/ConnexionBDD.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVP/Modele/ConnexionBDD.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVP/Modele/Connexion_Modele.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVP/Modele/Connexion_Modele.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVP/Presentation/Connexion_Presenteur.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVP/Presentation/Connexion_Presenteur.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,6 +119,8 @@
       <workItem from="1762330576018" duration="423000" />
       <workItem from="1762357460146" duration="25000" />
       <workItem from="1763538578963" duration="27000" />
+      <workItem from="1763538639156" duration="198000" />
+      <workItem from="1763542169933" duration="724000" />
     </task>
     <task id="LOCAL-00001" summary="modif nom">
       <option name="closed" value="true" />
@@ -221,7 +162,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762330390976</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="modifications du code suite à la revue (modif soumission soumission justificatif et modifications de ce qui n'avais pas été validé)">
+      <option name="closed" value="true" />
+      <created>1763538742585</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1763538742585</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,7 +187,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/Enzo-Levan" />
+                        <option value="origin/main" />
                       </list>
                     </value>
                   </entry>
@@ -255,6 +204,7 @@
     <MESSAGE value="ajout fichier commun" />
     <MESSAGE value="ajout fichier commun style" />
     <MESSAGE value="ajout code" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout code" />
+    <MESSAGE value="modifications du code suite à la revue (modif soumission soumission justificatif et modifications de ce qui n'avais pas été validé)" />
+    <option name="LAST_COMMIT_MESSAGE" value="modifications du code suite à la revue (modif soumission soumission justificatif et modifications de ce qui n'avais pas été validé)" />
   </component>
 </project>

@@ -17,7 +17,7 @@ function trouverUtilisateurParNom($conn1, $username) {
         $requeteRole = $conn1->prepare( "SELECT role FROM Utilisateur WHERE nomutilisateur = :nom");
         $requeteRole->bindParam(':nom', $username);
         $requeteRole->execute();
-        $role = $requeteRole->fetchColumn(); // Note: cette ligne est écrasée si $hash est valide dans le Présentateur
+        $role = $requeteRole->fetchColumn();
 
         // on récupère l'ID de l'utilisateur
         $requeteId = $conn1->prepare( "SELECT idutilisateur FROM Utilisateur WHERE nomutilisateur = :nom");
@@ -25,15 +25,28 @@ function trouverUtilisateurParNom($conn1, $username) {
         $requeteId->execute();
         $idUtilisateur = $requeteId->fetchColumn();
 
-        // On retourne toutes les informations
+        // tentatives échouées
+        $reqTentatives = $conn1->prepare("SELECT tentatives_echouees FROM Utilisateur WHERE nomutilisateur = :nom");
+        $reqTentatives->bindParam(':nom', $username);
+        $reqTentatives->execute();
+        $tentatives = $reqTentatives->fetchColumn();
+
+        // date fin blocage
+        $reqBlocage = $conn1->prepare("SELECT date_fin_blocage FROM Utilisateur WHERE nomutilisateur = :nom");
+        $reqBlocage->bindParam(':nom', $username);
+        $reqBlocage->execute();
+        $blocage = $reqBlocage->fetchColumn();
+
         return [
             'hash' => $hash,
             'role' => $role,
-            'idUtilisateur' => $idUtilisateur
+            'idUtilisateur' => $idUtilisateur,
+            'tentatives' => $tentatives,
+            'blocage' => $blocage
         ];
 
     } catch(PDOException $e) {
-        return false; // Erreur de requête
+        return false;
     }
 }
 ?>

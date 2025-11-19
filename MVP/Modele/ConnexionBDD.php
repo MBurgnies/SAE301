@@ -1,8 +1,6 @@
 <?php
-/*
- * Fichier Modele
- * Contient la fonction UNIQUE pour se connecter à la BDD.
-*/
+// mettre le bon fuseau horaire parce que sinon on avait 45min de retard environ
+date_default_timezone_set('Europe/Paris');
 
 /**
  * Fonction qui crée et retourne l'objet de connexion PDO.
