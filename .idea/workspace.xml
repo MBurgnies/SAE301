@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e8703d9-5157-4b24-bb96-ef2aa4738c50" name="Changes" comment="modifications du code suite à la revue (modif soumission soumission justificatif et modifications de ce qui n'avais pas été validé)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVP/Modele/ConnexionBDD.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVP/Modele/ConnexionBDD.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVP/Modele/Connexion_Modele.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVP/Modele/Connexion_Modele.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVP/Presentation/Connexion_Presenteur.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVP/Presentation/Connexion_Presenteur.php" afterDir="false" />
+    <list default="true" id="1e8703d9-5157-4b24-bb96-ef2aa4738c50" name="Changes" comment="Ajout système de sécurité (blocage de 15 min après 5 tentatives échouées">
+      <change afterPath="$PROJECT_DIR$/Liquibase" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +117,7 @@
       <workItem from="1762357460146" duration="25000" />
       <workItem from="1763538578963" duration="27000" />
       <workItem from="1763538639156" duration="198000" />
-      <workItem from="1763542169933" duration="724000" />
+      <workItem from="1763542169933" duration="1389000" />
     </task>
     <task id="LOCAL-00001" summary="modif nom">
       <option name="closed" value="true" />
@@ -170,7 +167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763538742585</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Ajout système de sécurité (blocage de 15 min après 5 tentatives échouées">
+      <option name="closed" value="true" />
+      <created>1763546878117</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1763546878117</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,6 +210,7 @@
     <MESSAGE value="ajout fichier commun style" />
     <MESSAGE value="ajout code" />
     <MESSAGE value="modifications du code suite à la revue (modif soumission soumission justificatif et modifications de ce qui n'avais pas été validé)" />
-    <option name="LAST_COMMIT_MESSAGE" value="modifications du code suite à la revue (modif soumission soumission justificatif et modifications de ce qui n'avais pas été validé)" />
+    <MESSAGE value="Ajout système de sécurité (blocage de 15 min après 5 tentatives échouées" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout système de sécurité (blocage de 15 min après 5 tentatives échouées" />
   </component>
 </project>
